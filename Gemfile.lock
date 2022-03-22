@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/kufu/activerecord-bitemporal.git
+  revision: 123e9225686580465c703dced048e61d2150c2a1
+  specs:
+    activerecord-bitemporal (0.1.0)
+      activerecord (>= 5.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -187,6 +194,7 @@ GEM
       railties (>= 6.0.0)
     strscan (3.0.1)
     thor (1.2.1)
+    timecop (0.9.5)
     timeout (0.2.0)
     turbo-rails (1.0.1)
       actionpack (>= 6.0.0)
@@ -213,6 +221,7 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
+  activerecord-bitemporal!
   bootsnap
   capybara
   debug
@@ -224,6 +233,7 @@ DEPENDENCIES
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
+  timecop
   turbo-rails
   tzinfo-data
   web-console
@@ -233,4 +243,4 @@ RUBY VERSION
    ruby 3.1.1p18
 
 BUNDLED WITH
-   2.3.7
+   2.3.9
