@@ -12,6 +12,7 @@
       <th scope="col">身長</th>
       <th scope="col">体重</th>
       <th scope="col">体脂肪率</th>
+      <th scope="col">BMI</th>
     </tr>
     </thead>
     <tbody>
@@ -22,7 +23,8 @@
         <td><%= person.age %></td>
         <td><%= person.height %></td>
         <td><%= person.weight %></td>
-        <td><%= person.body_fat %></td>
+        <td><%= number_to_percentage person.body_fat, precision: 2 %></td>
+        <td><%= format("%.2f", person.bmi) %></td>
         <td><%= link_to "Show this person", person %></td>
       </tr>
       <p>
