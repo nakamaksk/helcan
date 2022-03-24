@@ -3,12 +3,31 @@
 <h1>People</h1>
 
 <div id="people">
-  <% @people.each do |person| %>
-    <%= render person %>
-    <p>
-      <%= link_to "Show this person", person %>
-    </p>
-  <% end %>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">名前</th>
+      <th scope="col">身長</th>
+      <th scope="col">体重</th>
+      <th scope="col">体脂肪率</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <th scope="row"><%= person.id %></th>
+        <td><%= person.name %></td>
+        <td><%= person.height %></td>
+        <td><%= person.weight %></td>
+        <td><%= person.body_fat %></td>
+        <td><%= link_to "Show this person", person %></td>
+      </tr>
+      <p>
+      </p>
+    <% end %>
+    </tbody>
+  </table>
 </div>
 
 <%= link_to "New person", new_person_path %>
