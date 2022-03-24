@@ -17,7 +17,7 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
 
   test "should create person" do
     assert_difference("Person.count") do
-      post people_url, params: { person: { age: @person.age, body_fat: @person.body_fat, first_name: @person.first_name, height: @person.height, last_name: @person.last_name, weight: @person.weight } }
+      post people_url, params: { person: { birth_date: @person.birth_date, body_fat: @person.body_fat, first_name: @person.first_name, height: @person.height, last_name: @person.last_name, weight: @person.weight } }
     end
 
     assert_redirected_to person_url(Person.last)
@@ -34,7 +34,7 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update person" do
-    patch person_url(@person), params: { person: { age: @person.age, body_fat: @person.body_fat, first_name: @person.first_name, height: @person.height, last_name: @person.last_name, weight: @person.weight } }
+    patch person_url(@person), params: { person: { birth_date: @person.birth_date, body_fat: @person.body_fat, first_name: @person.first_name, height: @person.height, last_name: @person.last_name, weight: @person.weight } }
     assert_redirected_to person_url(@person)
   end
 

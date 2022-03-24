@@ -14,7 +14,7 @@ class PeopleTest < ApplicationSystemTestCase
     visit people_url
     click_on "New person"
 
-    fill_in "Age", with: @person.age
+    fill_in "Birth date", with: @person.birth_date
     fill_in "Body fat", with: @person.body_fat
     fill_in "First name", with: @person.first_name
     fill_in "Height", with: @person.height
@@ -30,7 +30,7 @@ class PeopleTest < ApplicationSystemTestCase
     visit person_url(@person)
     click_on "Edit this person", match: :first
 
-    fill_in "Age", with: @person.age
+    fill_in "Birth date", with: @person.birth_date
     fill_in "Body fat", with: @person.body_fat
     fill_in "First name", with: @person.first_name
     fill_in "Height", with: @person.height

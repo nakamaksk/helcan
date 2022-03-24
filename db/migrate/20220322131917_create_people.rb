@@ -3,7 +3,8 @@ class CreatePeople < ActiveRecord::Migration[7.0]
     create_table :people do |t|
       t.string :first_name, null: false, default: ''
       t.string :last_name, null: false, default: ''
-      t.float :age, null: false, default: 0
+      # デフォルトは20歳
+      t.date :birth_date, null: false, default:  Date.new(Date.today.year - 20, Date.today.month, Date.today.day)
       t.float :height, null: false, default: 0.0
       t.float :weight, null: false, default: 0.0
       t.float :body_fat, null: false, default: 0.0
