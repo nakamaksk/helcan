@@ -91,11 +91,14 @@ GEM
     childprocess (4.1.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    cssbundling-rails (1.1.0)
+      railties (>= 6.0.0)
     debug (1.4.0)
       irb (>= 1.3.6)
       reline (>= 0.2.7)
     digest (3.1.0)
     erubi (1.10.0)
+    ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -110,6 +113,8 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jsbundling-rails (1.0.2)
+      railties (>= 6.0.0)
     loofah (2.15.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -178,6 +183,14 @@ GEM
       io-console (~> 0.5)
     rexml (3.2.5)
     rubyzip (2.3.2)
+    sassc (2.4.0)
+      ffi (~> 1.9)
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
     selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -194,6 +207,7 @@ GEM
       railties (>= 6.0.0)
     strscan (3.0.1)
     thor (1.2.1)
+    tilt (2.0.10)
     timecop (0.9.5)
     timeout (0.2.0)
     turbo-rails (1.0.1)
@@ -224,11 +238,14 @@ DEPENDENCIES
   activerecord-bitemporal!
   bootsnap
   capybara
+  cssbundling-rails
   debug
   importmap-rails
   jbuilder
+  jsbundling-rails
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
+  sassc-rails
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
