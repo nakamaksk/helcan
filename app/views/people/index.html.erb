@@ -13,6 +13,8 @@
       <th scope="col">体重</th>
       <th scope="col">体脂肪率</th>
       <th scope="col">BMI</th>
+      <th scope="col">肥満度</th>
+      <th scope="col">アクション</th>
     </tr>
     </thead>
     <tbody>
@@ -20,18 +22,21 @@
       <tr>
         <th scope="row"><%= person.id %></th>
         <td><%= person.name %></td>
-        <td><%= person.age %></td>
-        <td><%= person.height %></td>
-        <td><%= person.weight %></td>
+        <td><%= person.age %>歳</td>
+        <td><%= person.height %>cm</td>
+        <td><%= person.weight %>kg</td>
         <td><%= number_to_percentage person.body_fat, precision: 2 %></td>
         <td><%= format("%.2f", person.bmi) %></td>
-        <td><%= link_to "Show this person", person %></td>
+        <td><%= fat_level(person) %></td>
+        <td>
+          <%= link_to "Show", person %> |
+          <%= link_to "Edit", edit_person_path(person) %>
+        </td>
       </tr>
-      <p>
-      </p>
     <% end %>
     </tbody>
   </table>
 </div>
 
 <%= link_to "New person", new_person_path %>
+
