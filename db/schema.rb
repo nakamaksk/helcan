@@ -11,10 +11,13 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_03_22_131917) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "people", force: :cascade do |t|
     t.string "first_name", default: "", null: false
     t.string "last_name", default: "", null: false
-    t.date "birth_date", default: "2002-03-24", null: false
+    t.date "birth_date", default: "2000-01-01", null: false
     t.float "height", default: 0.0, null: false
     t.float "weight", default: 0.0, null: false
     t.float "body_fat", default: 0.0, null: false
