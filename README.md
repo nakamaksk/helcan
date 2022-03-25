@@ -1,24 +1,16 @@
-# README
+# Helcan
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Helcanは健康管理のWebアプリケーションです。（作成中）
 
-Things you may want to cover:
+# 管理情報
 
-* Ruby version
+- 名前
+- 誕生日（年齢）
+- 体重
+- 身長
+- BMI
+- 肥満度
 
-* System dependencies
 
-* Configuration
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
