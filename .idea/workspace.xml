@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5c20a60-d6e2-455a-bfc2-91cddff14171" name="変更" comment="add devise">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="d5c20a60-d6e2-455a-bfc2-91cddff14171" name="変更" comment="disable signup">
+      <change afterPath="$PROJECT_DIR$/app/assets/images/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/helcan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/helcan.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/config/manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/config/manifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +40,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/images" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -193,7 +196,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648183299075</updated>
       <workItem from="1648183300239" duration="2699000" />
-      <workItem from="1648282923287" duration="2537000" />
+      <workItem from="1648282923287" duration="7824000" />
     </task>
     <task id="LOCAL-00001" summary="change product name 'helcan'">
       <created>1648183402424</created>
@@ -258,7 +261,35 @@
       <option name="project" value="LOCAL" />
       <updated>1648553798918</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add users table">
+      <created>1648554747201</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1648554747201</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add sign_out button">
+      <created>1648555533035</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1648555533035</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add devise views">
+      <created>1648555956234</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1648555956234</updated>
+    </task>
+    <task id="LOCAL-00013" summary="disable signup">
+      <created>1648558124717</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1648558124717</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +320,11 @@
     <MESSAGE value="change product name 'helcan'" />
     <MESSAGE value="config.assets.compile = falseでうまくいくか確認" />
     <MESSAGE value="add devise" />
-    <option name="LAST_COMMIT_MESSAGE" value="add devise" />
+    <MESSAGE value="add users table" />
+    <MESSAGE value="add sign_out button" />
+    <MESSAGE value="add devise views" />
+    <MESSAGE value="disable signup" />
+    <option name="LAST_COMMIT_MESSAGE" value="disable signup" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/helcan@db_migrate__helcan.rcov" NAME="db:migrate: helcan のカバレッジ結果" MODIFIED="1648251014333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="helcan" />
