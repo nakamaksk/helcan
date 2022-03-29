@@ -76,3 +76,5 @@ gem 'timecop'
 
 gem 'jsbundling-rails'  # needed for bootstrap javascript
 gem 'cssbundling-rails' # Install bootstrap 5
+
+gem 'devise'
