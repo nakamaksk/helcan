@@ -3,7 +3,6 @@ class LineController < ApplicationController
   require 'line/bot'
 
   before_action :authenticate_user!, except: :callback
-  before_action :auth, only: :callback
 
   # callbackアクションのCSRFトークン認証を無効
   protect_from_forgery :except => [:callback]
@@ -16,20 +15,16 @@ class LineController < ApplicationController
     }
   end
 
-  def auth
-    unless params[:token] == ENV["API_TOKEN"]
-      head :unauthorized
-      return
-    end
-  end
-
   def callback
     body = request.body.read
 
+    unless params[:token] == ENV["API_TOKEN"]
+      head :unauthorized && return
+    end
+
     signature = request.env['HTTP_X_LINE_SIGNATURE']
     unless client.validate_signature(body, signature)
-      error 400 do 'Bad Request' end
-      return
+      head :bad_request && return
     end
 
     events = client.parse_events_from(body)

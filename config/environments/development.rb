@@ -78,5 +78,5 @@ Rails.application.configure do
   #      In production, :host should be set to the actual host of your application.
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  config.hosts << "72c1-113-149-161-193.ngrok.io"
+  config.hosts << ENV['DOMAIN']
 end
