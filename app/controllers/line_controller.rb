@@ -35,7 +35,7 @@ class LineController < ApplicationController
         when Line::Bot::Event::MessageType::Text
           message = {
             type: 'text',
-            text: event.message['text']
+            text: reply_message(event.message['text'], event['source']['userId'])
           }
           client.reply_message(event['replyToken'], message)
         when Line::Bot::Event::MessageType::Image, Line::Bot::Event::MessageType::Video
@@ -49,6 +49,26 @@ class LineController < ApplicationController
     head :ok
 
   end
+
+  def reply_message(message, line_user_id)
+    person = Person.find_by_line_user_id(line_user_id)
+    return '' unless person
+
+    case message
+    when '身長'
+      person.height
+    when '体重'
+      person.weight
+    when 'BMI'
+      person.bmi
+    else
+      <<~"MSG".chomp
+        身長：#{person.height}cm
+        体重：#{person.weight}kg
+        BMI：#{format("%.2f", person.bmi)}
+        体脂肪：#{format("%.2f", person.body_fat)}%
+        肥満度：#{person.fat_level}
+      MSG
+    end
+  end
 end
-
-
