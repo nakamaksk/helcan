@@ -12,8 +12,6 @@ Rails.application.routes.draw do
 
   resources :people
 
+  post '/callback' => 'line#callback'
 
-  namespace :line do
-    get :test
-  end
 end

@@ -94,4 +94,6 @@ Rails.application.configure do
   # devise config
   # In production, :host should be set to the actual host of your application.
   config.action_mailer.default_url_options = { host: ENV['DOMAIN'], port: 443 }
+
+  config.hosts << ENV['DOMAIN']
 end
