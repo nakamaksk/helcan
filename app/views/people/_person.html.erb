@@ -52,11 +52,11 @@
             </li>
           </ul>
           <div class="row m-2">
-            <div class="col-2">
+            <div class="col-sm-3 col-md-2">
               <%= button_to t('edit'), edit_person_path(@person), method: :get, class: 'btn btn-info' %>
             </div>
             <% if false # 確認ダイアログが実装できるまで非表示%>
-              <div class="col-2 offset-8">
+              <div class="col-md-2 offset-8">
                 <%= button_to t('delete'), @person, method: :delete, class: 'btn btn-danger'  %>
               </div>
             <% end %>
