@@ -1,32 +1,94 @@
 <div id="<%= dom_id person %>">
-  <p>
-    <strong>Last name:</strong>
-    <%= person.last_name %>
-  </p>
 
-  <p>
-    <strong>First name:</strong>
-    <%= person.first_name %>
-  </p>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="card col-3" >
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"></p>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0"><%= t 'name' %></h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                <%= person.name %>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0"><%= t 'age' %></h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                <%= person.age %>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0"><%= t 'height' %></h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                <%= person.height %>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0"><%= t 'weight' %></h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                <%= person.weight %>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0"><%= t 'body_fat' %></h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                <%= person.body_fat %>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0"><%= t 'bmi' %></h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                <%= format("%.2f", person.bmi) %>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0"><%= t 'fat_level' %></h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                <%= fat_level(person) %>
+              </div>
+            </div>
+            <hr>
 
-  <p>
-    <strong>Birth date:</strong>
-    <%= person.birth_date %>
-  </p>
-
-  <p>
-    <strong>Height:</strong>
-    <%= person.height %>
-  </p>
-
-  <p>
-    <strong>Weight:</strong>
-    <%= person.weight %>
-  </p>
-
-  <p>
-    <strong>Body fat:</strong>
-    <%= person.body_fat %>
-  </p>
-
+            <div class="row">
+              <div class="col-2">
+                <%= button_to t('edit'), edit_person_path(@person), method: :get, class: 'btn btn-info' %>
+              </div>
+              <div class="col-2 offset-8">
+                <%= button_to t('delete'), @person, method: :delete, class: 'btn btn-danger'  %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+<%= link_to "Back to people", people_path %>
