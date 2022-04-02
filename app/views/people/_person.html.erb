@@ -4,9 +4,18 @@
     <div class="row justify-content-md-center">
       <div class="col-sm-12 col-md-3">
         <div class="card" >
-          <img src="..." class="card-img-top" alt="...">
+          <span class="m-1" style="text-align: center;">
+            <% if false # TODO:ユーザの画像があれば表示 %>
+              <img class="m-1" src="..." class="card-img-top" alt="...">
+            <% else # default icon%>
+              <%= image_tag('person-square.svg', class: 'm-1', style: 'height: 7em')  %>
+            <% end %>
+          </span>
           <div class="card-body mb-3">
-            <p class="card-text"></p>
+            <h5>目標</h5>
+            <p class="card-text">
+              2020年4月9日までに75キロ未満にする！
+            </p>
           </div>
         </div>
       </div>
@@ -42,11 +51,20 @@
               <span class="text-secondary"><%= fat_level(person) %></span>
             </li>
           </ul>
+          <div class="row m-2">
+            <div class="col-2">
+              <%= button_to t('edit'), edit_person_path(@person), method: :get, class: 'btn btn-info' %>
+            </div>
+            <% if false # 確認ダイアログが実装できるまで非表示%>
+              <div class="col-2 offset-8">
+                <%= button_to t('delete'), @person, method: :delete, class: 'btn btn-danger'  %>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 
 <%= link_to "Back to people", people_path %>
