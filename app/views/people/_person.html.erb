@@ -64,10 +64,21 @@
         </div>
       </div>
       <div class="col-sm-9">
-        <%= line_chart Person.group_by_day(:valid_from).maximum(:weight) %>
+        <%
+          # chartのオプション
+          # https://chartkick.com/#rails-7-importmap
+          opts = {
+           discrete: true,
+           label: "体重",
+           # points: false,
+           legend: true
+          }
+        %>
+        <%= line_chart @weights_for_line_chart, **opts %>
       </div>
     </div>
   </div>
 </div>
 
 <%= link_to "Back to people", people_path %>
+
