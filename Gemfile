@@ -90,3 +90,6 @@ gem 'line-bot-api'
 
 gem 'dotenv-rails'
 
+# Chart
+gem "chartkick"
+gem "groupdate"

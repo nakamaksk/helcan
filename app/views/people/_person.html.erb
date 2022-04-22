@@ -63,6 +63,9 @@
           </div>
         </div>
       </div>
+      <div class="col-sm-9">
+        <%= line_chart Person.group_by_day(:valid_from).maximum(:weight) %>
+      </div>
     </div>
   </div>
 </div>
