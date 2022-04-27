@@ -15,7 +15,7 @@ Helcanは健康管理のWebアプリケーションです。（作成中）
 - 肥満度
 - 目標
 
-<img width="878" alt="image" src="https://user-images.githubusercontent.com/7373564/161375333-81f35ff9-71d3-4377-93ef-3203a0fe5a24.png">
+<img width="1025" alt="image" src="https://user-images.githubusercontent.com/7373564/165475758-ebe07dcc-98ec-4872-9dc0-5d526024118a.png">
 
 
 
