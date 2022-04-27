@@ -8,9 +8,9 @@ class PeopleController < ApplicationController
 
   # GET /people/1 or /people/1.json
   def show
-    @weights_for_line_chart = weights_for_line_chart(@person)
-    @min_weight = @weights_for_line_chart.filter{|_, v| v }.min_by{|(_, val)| val}[1]
-    @max_weight = @weights_for_line_chart.filter{|_, v| v }.max_by{|(_, val)| val}[1]
+    @weights_by_day = @person.weights_by_day
+    @min_weight = @weights_by_day.filter{|_, v| v }.min_by{|(_, val)| val}[1]
+    @max_weight = @weights_by_day.filter{|_, v| v }.max_by{|(_, val)| val}[1]
   end
 
   # GET /people/new
@@ -70,17 +70,4 @@ class PeopleController < ApplicationController
     def person_params
       params.require(:person).permit(:last_name, :first_name, :birth_date, :height, :weight, :body_fat, :goal)
     end
-
-  # 日毎の体重取得
-  # https://github.com/kufu/activerecord-bitemporal
-  # OK : bitemporal_id で検索を行う
-  # MEMO: id = bitemporal_id なの
-  #       find_by(bitemporal_id: employee.id)
-  #       でも動作するが employee.bitemporal_id と書いたほうが意図が伝わりやすい
-  def weights_for_line_chart(person)
-    Person.ignore_valid_datetime
-          .where(bitemporal_id: person.bitemporal_id)
-          .group_by_day(:valid_from)
-          .maximum(:weight)
-  end
 end

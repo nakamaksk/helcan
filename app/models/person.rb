@@ -43,4 +43,17 @@ class Person < ActiveRecord::Base
   def thin_alert?
     bmi < 18.5
   end
+
+  # 日毎の体重取得
+  # https://github.com/kufu/activerecord-bitemporal
+  # OK : bitemporal_id で検索を行う
+  # MEMO: id = bitemporal_id なの
+  #       find_by(bitemporal_id: employee.id)
+  #       でも動作するが employee.bitemporal_id と書いたほうが意図が伝わりやすい
+  def weights_by_day
+    Person.ignore_valid_datetime
+          .where(bitemporal_id: bitemporal_id)
+          .group_by_day(:valid_from)
+          .maximum(:weight)
+  end
 end
