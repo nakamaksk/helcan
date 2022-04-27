@@ -72,8 +72,8 @@
            label: "体重",
            # points: false,
            legend: true,
-           min: @min_weight.floor - 5,
-           max: @max_weight.ceil + 5,
+           min: @min_weight.floor - 1,
+           max: @max_weight.ceil + 1,
           }
         %>
         <%= line_chart @weights_for_line_chart, **opts %>
