@@ -64,4 +64,8 @@ class Person < ActiveRecord::Base
   def piyo
     puts 'hoge'
   end
+
+  def foo
+    puts 'foo'
+  end
 end
