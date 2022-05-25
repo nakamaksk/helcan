@@ -60,4 +60,8 @@ class Person < ActiveRecord::Base
   def hoge
     puts 'hoge'
   end
+
+  def piyo
+    puts 'hoge'
+  end
 end
