@@ -56,4 +56,8 @@ class Person < ActiveRecord::Base
           .group_by_day(:valid_from)
           .maximum(:weight)
   end
+
+  def hoge
+    puts 'hoge'
+  end
 end
