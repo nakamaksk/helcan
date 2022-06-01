@@ -80,7 +80,7 @@ group :test do
   gem "webdrivers"
 end
 
-gem 'activerecord-bitemporal', github: 'kufu/activerecord-bitemporal'
+gem 'activerecord-bitemporal'
 gem 'timecop'
 
 gem 'jsbundling-rails'  # needed for bootstrap javascript
